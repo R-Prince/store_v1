@@ -47,7 +47,8 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://8080-teal-snail-1z22pp5p.ws-eu03.gitpod.io'
+    'https://8080-jade-goldfish-0sxyvt68.ws-eu03.gitpod.io',
+    'http://localhost:8080'
 ]
 
 MIDDLEWARE = [

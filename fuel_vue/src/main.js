@@ -1,6 +1,11 @@
-import { createApp } from 'vue'
+import {
+    createApp
+} from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import axios from 'axios'
 
-createApp(App).use(store).use(router).mount('#app')
+axios.defaults.baseURL = 'https://8000-jade-goldfish-0sxyvt68.ws-eu03.gitpod.io'
+
+createApp(App).use(store).use(router, axios).mount('#app')
