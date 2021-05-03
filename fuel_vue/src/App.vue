@@ -3,13 +3,13 @@
     <nav class="navbar is-dark">
         <div class="navbar-brand">
             <router-link to="/" class="navbar-item"><strong>Fuel</strong></router-link>
-            <a class="navbar-burger" aria-label="menu" aria-expanded="false"    data-target="navbar-menu">
+            <a class="navbar-burger" aria-label="menu" aria-expanded="false"    data-target="navbar-menu" @click="showMobileMenu = !showMobileMenu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-        <div class="navbar-menu" id="navbar-menu">
+        <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': showMobileMenu }">
             <div class="navbar-end">
                 <router-link to="/protein" class="navbar-item">Protein</router-link>
                 <router-link to="/shakers" class="navbar-item">Shakers</router-link>
@@ -35,6 +35,16 @@
     <p class="has-text-centered">Copyright (c) 2021</p>
   </footer>
 </template>
+
+<script>
+    export default {
+        data(){
+            return{
+                showMobileMenu: false,
+            }
+        }
+    }
+</script>
 
 <style lang="scss">
 @import '../node_modules/bulma';
